@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 export async function getStaticPaths() {
   const result = await fetch("/api/discord/commands");
   const data = await result.json();
+
   data.sort((a: any, b: any) => {
     if (a.category > b.category) return 1;
     if (a.category < b.category) return -1;
