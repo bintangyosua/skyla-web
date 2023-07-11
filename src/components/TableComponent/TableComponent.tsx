@@ -33,7 +33,7 @@ export default function TableComponent() {
             Commands
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            This list will help you to understand Skyla's Commands
+            This list will help you to understand Skyla&apos;s Commands
           </p>
         </div>
         <div className="lg:w-2/3 w-full mx-auto overflow-auto">
