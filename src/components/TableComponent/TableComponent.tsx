@@ -9,6 +9,7 @@ export async function getStaticPaths() {
     if (a.category < b.category) return -1;
     return 0;
   });
+
   return data;
 }
 
