@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { config } from "@/utils/config";
 import { join } from "path";
+import Image from "next/image";
 
 export default function HomepageHeroComponent() {
   return (
@@ -30,7 +31,7 @@ export default function HomepageHeroComponent() {
         </div>
       </div>
       <div className="lg:max-w-lg lg:w-72 md:w-1/2 w-5/6">
-        <img
+        <Image
           className="object-cover object-center rounded"
           alt="hero"
           src="/kyubey.png"
