@@ -10,9 +10,11 @@ export default function LayoutComponent({ children }: Props) {
   return (
     <>
       <NavbarComponent />
-      <div className="py-5 min-h-screen min-w-full mx-auto landing-page-image">
-        {children}
-      </div>
+      <section className="text-gray-400 body-font">
+        <div className="py-12 min-h-screen min-w-full mx-auto landing-page-image">
+          {children}
+        </div>
+      </section>
       <FooterComponent />
     </>
   );

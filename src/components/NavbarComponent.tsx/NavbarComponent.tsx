@@ -3,6 +3,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import NextComponent from "../IconComponents/NextComponent";
 import Link from "next/link";
 import styles from "./Load.module.css";
+import { config } from "@/utils/config";
 
 export default function NavbarComponent() {
   const { data: session, status } = useSession();
@@ -24,8 +25,16 @@ export default function NavbarComponent() {
             href="/dashboard">
             Dashboard
           </Link>
-          <a className="mr-5 font-semibold hover:text-white">Invite Bot</a>
-          <a className="mr-5 font-semibold hover:text-white">Join Server</a>
+          <Link
+            href={config.inviteBot}
+            className="mr-5 font-semibold hover:text-white">
+            Invite Bot
+          </Link>
+          <Link
+            href={config.joinServer}
+            className="mr-5 font-semibold hover:text-white">
+            Join Server
+          </Link>
         </nav>
 
         {!session && (
