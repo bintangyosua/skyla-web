@@ -27,17 +27,17 @@ export default function TableComponent() {
   }, []);
 
   return (
-    <section className="text-gray-400 bg-gray-900 body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-10">
+    <section className="text-gray-400 body-font">
+      <div className="container py-24 mx-auto lg:w-[1136px]">
+        <div className="flex flex-col text-center mb-10">
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">
             Commands
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+          <p className="lg:w-6/8 mx-auto leading-relaxed text-base">
             This list will help you to understand Skyla&apos;s Commands
           </p>
         </div>
-        <div className="lg:w-2/3 w-full mx-auto overflow-auto">
+        <div className="lg:w-6/8 w-full mx-auto overflow-auto">
           <table className="table-auto w-full text-left whitespace-no-wrap">
             <thead>
               <tr className="">
@@ -72,7 +72,7 @@ export default function TableComponent() {
             </tbody>
           </table>
         </div>
-        <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+        <div className="flex pl-4 mt-4 lg:w-6/8 w-full">
           <a className="text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0">
             Learn More
             <svg

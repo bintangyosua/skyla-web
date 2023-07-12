@@ -5,8 +5,6 @@ generator client {
 datasource db {
   provider          = "postgresql"
   url               = env("POSTGRES_PRISMA_URL")
-  directUrl         = env("POSTGRES_URL_NON_POOLING")
-  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model User {
@@ -17,6 +15,7 @@ model User {
   level       Int      @default(0)
   reputation  Int      @default(0)
   xp          Int      @default(0)
+  balance     Int      @default(0)
 }
 
 model Command {
@@ -24,4 +23,12 @@ model Command {
   description String
   category    String
   nsfw        Boolean
+}
+
+model Shop {
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+  buy_price   Int
+  sell_pricec Int
 }
