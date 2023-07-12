@@ -5,7 +5,8 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export default NextAuth({
-  secret: "juhyun",
+  secret: process.env.NEXTAUTH_SECRET,
+  debug: true,
   providers: [
     DiscordProvider({
       clientId: process.env.DISCORD_CLIENT_ID || "",
