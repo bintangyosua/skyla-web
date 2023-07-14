@@ -4,10 +4,10 @@ import NextComponent from "../IconComponents/NextComponent";
 import Link from "next/link";
 import styles from "./Load.module.css";
 import { config } from "@/utils/config";
+import Image from "next/image";
 
 export default function NavbarComponent() {
   const { data: session, status } = useSession();
-  console.log({ session, status });
 
   return (
     <header className="text-gray-300 body-font">
@@ -38,30 +38,46 @@ export default function NavbarComponent() {
         </nav>
 
         {!session && (
-          <Link
-            href="/api/auth/signin"
-            onClick={(e) => {
-              e.preventDefault();
-              signIn();
-            }}>
-            <button className="inline-flex items-center font-semibold bg-gray-800 border-0 py-2 px-4 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 mx-3">
-              Login
-              <NextComponent />
-            </button>
-          </Link>
+          <div className="text-white">
+            <Link
+              href="/api/auth/signin"
+              onClick={(e) => {
+                e.preventDefault();
+                signIn();
+              }}>
+              <button className="inline-flex items-center font-semibold bg-indigo-600 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded text-base mt-4 md:mt-0 mx-3">
+                Login
+                <NextComponent />
+              </button>
+            </Link>
+          </div>
         )}
         {session && (
-          <Link
-            href="/api/auth/signout"
-            onClick={(e) => {
-              e.preventDefault();
-              signOut();
-            }}>
-            <button className="inline-flex items-center font-semibold bg-gray-800 border-0 py-2 px-4 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 mx-3">
-              Logout
-              <NextComponent />
-            </button>
-          </Link>
+          <div className="text-white">
+            <div className="flex space-x-2 justify-center items-center font-semibold lg:mt-0 sm:mt-2 md:mt-2 mt-4">
+              <Image
+                src={
+                  "https://images-ext-1.discordapp.net/external/vg0_fa1FPei3SOvfmpgwOiGy0dtQzpMTZRwlE7cS-XE/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/454629351607107595/34c82408a49f8900d2393ce504f21b3a.png"
+                }
+                width={45}
+                height={45}
+                alt="Discord profile"
+                className="rounuded rounded-full"
+              />
+              <span>Minuettaro</span>
+              <Link
+                href="/api/auth/signout"
+                onClick={(e) => {
+                  e.preventDefault();
+                  signOut();
+                }}>
+                <button className="inline-flex items-center font-semibold bg-indigo-600 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-700 rounded text-base mt-0 md:mt-0 mx-3 ">
+                  Logout
+                  <NextComponent />
+                </button>
+              </Link>
+            </div>
+          </div>
         )}
       </div>
     </header>

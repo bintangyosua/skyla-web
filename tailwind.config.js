@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "discord-purple": "#7289DA",
         "tatsu-blue": "#00A3FF",
+        "skyla-purple": "rgb(99, 102, 241, 1)",
       },
     },
   },

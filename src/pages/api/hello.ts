@@ -5,6 +5,10 @@ type Data = {
   name: string;
 };
 
+/**
+ * @swagger
+ */
+
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>

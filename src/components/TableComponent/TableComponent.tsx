@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export async function getStaticPaths() {
+export async function getServerSideProps() {
   const result = await fetch("/api/discord/commands");
   const data = await result.json();
 
@@ -19,7 +19,7 @@ export default function TableComponent() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getStaticPaths();
+      const data = await getServerSideProps();
       setCommands(data);
     };
 
