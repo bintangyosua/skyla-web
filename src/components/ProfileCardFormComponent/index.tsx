@@ -19,27 +19,27 @@ export default function ProfileCardFormComponent() {
             </div>
             <div className="relative mb-4">
               <label
-                htmlFor="nickname"
+                htmlFor="job"
                 className="leading-7 text-md text-gray-400 font=semibold block mb-2">
-                Nickname
+                Job
               </label>
               <input
                 type="text"
-                id="nickname"
-                name="nickname"
+                id="job"
+                name="job"
                 className="w-full bg-zinc-800 rounded border border-zinc-600 focus:border-zinc-500 focus:ring-2 focus:ring-zinc-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
           <div className="relative mb-0 w-1/2 h-full">
             <label
-              htmlFor="message"
+              htmlFor="description"
               className="leading-7 text-md text-gray-400 block mb-2">
               Description
             </label>
             <textarea
-              id="message"
-              name="message"
+              id="description"
+              name="description"
               className="w-full bg-zinc-800 rounded border border-zinc-600 focus:border-zinc-500 focus:ring-2 focus:ring-zinc-900 h-[136.3px] text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out overflow-hidden"></textarea>
           </div>
         </div>

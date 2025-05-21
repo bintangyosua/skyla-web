@@ -8,21 +8,22 @@ export default function FooterComponent() {
   return (
     <footer className="text-gray-300 body-font">
       <div className="container py-8 lg:w-[1136px] mx-auto flex items-center sm:flex-row flex-col">
-        <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <a className="flex items-center justify-center font-medium text-white title-font md:justify-start">
           <LogoComponent />
-          <span className="ml-3 text-xl">Skyla</span>
+          <span className="ml-3 text-xl">Josephine</span>
         </a>
-        <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
-          © 2023 Skyla —
+        <p className="mt-4 text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0">
+          © 2023 Minuettaro —
           <a
-            href="https://twitter.com/"
-            className="text-gray-500 ml-1"
+            href="https://github.com/bintangyosua"
+            className="ml-1 text-gray-500"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             @Minuettaro
           </a>
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
           <a className="ml-3 text-gray-400">
             <FacebookComponent />
           </a>
